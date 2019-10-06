@@ -32,7 +32,7 @@ class Background(arcade.Sprite):
 
 class Bullet(arcade.Sprite):
 
-    #initializes the bullet
+    #initializes the bullets
     def __init__(self, position, velocity, damage):
         super().__init__("assets/bullet.png", 0.5)
         (self.center_x, self.center_y) = position
