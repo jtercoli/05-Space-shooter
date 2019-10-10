@@ -15,7 +15,7 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 SCREEN_TITLE = "Wild & Wacky Space Sh00ter"
 
-NUM_ENEMIES = 8
+NUM_ENEMIES = 6
 STARTING_LOCATION = (400,100)
 BULLET_DAMAGE = 15
 ENEMY_HP = 120
@@ -35,6 +35,20 @@ class Bullet(arcade.Sprite):
     #initializes the bullets
     def __init__(self, position, velocity, damage):
         super().__init__("assets/bullet.png", 0.5)
+        (self.center_x, self.center_y) = position
+        (self.dx, self.dy) = velocity 
+        self.damage = damage
+
+    # moves the bullet
+    def update(self):
+        self.center_x += self.dx
+        self.center_y += self.dy
+
+class Bullet2(arcade.Sprite):
+
+    #initializes the bullets
+    def __init__(self, position, velocity, damage):
+        super().__init__("assets/bullet_enemy.png", 0.5)
         (self.center_x, self.center_y) = position
         (self.dx, self.dy) = velocity 
         self.damage = damage
@@ -68,18 +82,19 @@ class Window(arcade.Window):
         # Make the mouse disappear when it is over the window.
         # So we just see our object, not the pointer.
         self.set_mouse_visible(False)
-        arcade.set_background_color(open_color.black)
+        arcade.set_background_color(open_color.cyan_9)
         self.Background = Background
         self.bullet_list = arcade.SpriteList()
         self.enemy_list = arcade.SpriteList()
         self.player = Player()
         self.score = 0
+        self.end = ("You Won!")
 
 
     #Set up enemies 
     def setup(self):
         for i in range(NUM_ENEMIES):
-            x = 120 * (i+1) + 40
+            x = 120 * (i+1) 
             y = 500
             enemy = Enemy((x,y))
             self.enemy_list.append(enemy)
@@ -105,12 +120,16 @@ class Window(arcade.Window):
         self.bullet_list.draw()
         self.enemy_list.draw()
 
+        if self.score == 930:
+            arcade.draw_text(str(self.end), 320 , SCREEN_HEIGHT - 60, open_color.white, 16)
+
 
 
 
     def on_mouse_motion(self, x, y, dx, dy):
         """ Called to update our objects. Happens approximately 60 times per second."""
         self.player.center_x = x
+        self.player.center_y = y
 
     def on_mouse_press(self, x, y, button, modifiers):
         """
@@ -126,7 +145,11 @@ class Window(arcade.Window):
         """
         Called when a user releases a mouse button.
         """
-        pass
+        if button == arcade.MOUSE_BUTTON_LEFT:
+            x = self.enemy_list.center_x
+            y = self.enemy_list.center_y
+            bullet = Bullet2((x,y), (0,10), BULLET_DAMAGE)
+            self.bullet_list.append(bullet)
 
     def on_key_press(self, key, modifiers):
         """ Called whenever the user presses a key. """
