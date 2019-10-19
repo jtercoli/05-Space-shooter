@@ -1,0 +1,37 @@
+Name: Hua Zhao
+Date:
+ 10/18/2019
+Project: P05-Space Shooter
+Peer's repository: https://github.com/jtercoli/05-Space-Shooter.git 
+
+
+
+
+What is something you learned by reviewing your peer's project?
+	I noticed that my peer's choice of space ship is cool. And the choice of bullet looks cool as well. The surface looks clean 
+and well structured. 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+	I would like to use my peer's graphic choice. But it looks very similar to the homework. There is nothing I can apply on my own project.
+
+What suggestions would you have for your peer to improve his/her code?
+	I want to suggest my peer to add more details into the game. For example, peer can add enemies' fight back bullets.
+Or we can have enemies moving around the screen. 
+
+What could have been clearer or better commented?
+	The comments in the program is understandable. But in the bullet moving and space ship moving part, there are missing comments, so I don't 
+know what each line should do for the program. Peer can add some comments like when the user click the mouse, the space ship will shoot bullets, etc.
+Else, every thing is good.
+
+Was there anything in the code that was confusing to you? If so, what?
+	The code is not confusing to me at all. Overall it looks nice.
+Does the repository contain an appropriate LICENSE?
+
+	Yes, it contains an appropriate LICENSE
+
+What is something he/she could add to the README.md to make it more descriptive?
+	For the readme.md, it is better to introduce more about the game and teach what the user should do when they open 
+the game. My peer only use 2 sentences to describe the whole game. It is ok, but not well descriptive enough,
+Pay a compliment to your peer based on the quality of his/her code.
+8.5/10
+Peer can add more interesting content to the game such as welcome surface, system and user fighting each other and so on. 
