@@ -1,0 +1,37 @@
+Name: Dietrich Sears 
+Date: October 19
+Project: Space Shooter
+Peer's repository: https://github.com/jtercoli/05-Space-shooter
+
+
+
+What is something you learned by reviewing your peer's project?
+I learned some valuable tips for small features in a 2D game that can improve user expirience such as giving the player and option to control both x and y movments of the ship and adding special text when they have won the game.
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+I would like to impliment sprites that are trimmed perfectly so they can be applied to any color back ground like in my peers project.
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+The code itself works and is written effectivley. For the game mechanics it may be fun to add some movement to the enemies or give them the ability to fire back, just to increase difficulty. 
+ 
+
+What could have been clearer or better commented?
+The project was very clear and straight forward. The docstrings are helpful and clear. The only clarification that could apply would be some simple instructions on how to move and fire if the user cannot figure it out themselves. 
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+The code mirrored what was in my project so I was able to understand it. I was confused on the section where it appears to describe what happens in a key press event, which I couldn't get to happen in the display window. 
+ 
+
+Does the repository contain an appropriate LICENSE?
+Yes
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+Intructions for how to complete the game, even though it may seem obvious. It could also give a description of the game world to make it interesting for the player.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+The game looks great and the code works perfectly. A great example of a 2D space shooter in python arcade and was fun to play.
